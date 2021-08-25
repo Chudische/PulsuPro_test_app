@@ -1,6 +1,10 @@
 from flask import Flask
+from flask.globals import session
 from flask_sqlalchemy import SQLAlchemy
+
 import flask_admin as admin
+from flask_admin.contrib.sqla import ModelView
+
 
 # Create application
 app = Flask(__name__, template_folder='templates')
@@ -39,10 +43,26 @@ def index():
     return '<a href="/admin/">Click me to get to Admin!</a>'
 
 # Create admin interface
-admin = admin.Admin(name="Example: Simple Views", template_mode='bootstrap4')
+class CatalogAdmin(ModelView):
+
+    def __init__(self):
+        super(CatalogAdmin, self).__init__(Catalog_unit, db.session, name="Catalog")
+
+class DeliveryAdmin(ModelView):
+
+    def __init__(self):
+        super(DeliveryAdmin, self).__init__(Delivery_address, db.session, name="Delivery")
+
+
+admin = admin.Admin(name="PulsuPro Admin", template_mode='bootstrap4')
 admin.init_app(app)
+admin.add_view(CatalogAdmin())
+admin.add_view(DeliveryAdmin())
 
 if __name__ == '__main__':
+
+    # Create DB
+    db.create_all()
 
     # Start app
     app.run()
