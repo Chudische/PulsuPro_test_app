@@ -11,20 +11,29 @@
 
 1. Clone the repository::
 
+    ```
      git clone https://github.com/Chudische/test_app.git
 
      cd test_app
+    ```
 
 2. Create and activate a virtual environment::
 
+    ```
      virtualenv env
-     
+
      source env/bin/activate
+    ```
 
 3. Install requirements::
 
+    ```
      pip install -r 'requirements.txt'
+    ```
 
 4. Run the application::
 
+    ```
      python app.py
+    ```
+    
