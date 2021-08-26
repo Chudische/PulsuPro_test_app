@@ -12,6 +12,7 @@
 1. Clone the repository::
 
      git clone https://github.com/Chudische/test_app.git
+     
      cd test_app
 
 2. Create and activate a virtual environment::
