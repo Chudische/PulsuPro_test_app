@@ -13,7 +13,8 @@
 
     ```
      git clone https://github.com/Chudische/test_app.git
-
+    ```
+    ```
      cd test_app
     ```
 
@@ -21,7 +22,8 @@
 
     ```
      virtualenv env
-
+    ```
+    ```
      source env/bin/activate
     ```
 
