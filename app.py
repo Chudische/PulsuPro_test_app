@@ -5,7 +5,6 @@ from flask_sqlalchemy import SQLAlchemy
 import flask_admin as admin
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import helpers as admin_helpers
-from flask_admin.contrib.sqla.filters import BaseSQLAFilter
 from flask_security import Security, current_user, SQLAlchemyUserDatastore
 from flask_security.models import fsqla_v2 as fsqla
 from flask_security.utils import encrypt_password
