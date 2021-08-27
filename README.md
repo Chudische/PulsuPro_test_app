@@ -7,7 +7,8 @@
 Код тестового завдання викласти в гіт.
 Буде плюсом завернути це все в Docker та/чи покрити тестами.
 
-## Installation using virtualenv
+
+## Run in docker container
 
 1. Clone the repository::
 
@@ -17,26 +18,10 @@
     ```
      cd PulsuPro_test_app
     ```
-
-2. Create and activate a virtual environment::
-
-    ```
-     virtualenv env
-    ```
-    ```
-     source env/bin/activate
-    ```
-
-3. Install requirements::
+2. Run docker container
 
     ```
-     pip install -r 'PulsuPro_test_app/requirements.txt'
-    ```
-
-4. Run the application::
-
-    ```
-     python PulsuPro_test_app/app.py
+    docker-compose up
     ```
 
 
